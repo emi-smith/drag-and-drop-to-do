@@ -1,6 +1,6 @@
 # Drag & Drop To Do List
 
-- [Table of Contents](#Table-of-Contents)
+### Table of Contents
    - [Description](#Description)
    - [Technologies Used](#Technologies-Used)
    - [Landing Page Visuals](#Landing-Page-Visuals)

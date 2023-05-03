@@ -1,6 +1,6 @@
 # Drag & Drop To Do List
 
-- [Table of Contents](#Drag-&-Drop-To-Do-List)
+- [Table of Contents](#Table-of-Contents)
    - [Description](#Description)
    - [Technologies Used](#Technologies-Used)
    - [Landing Page Visuals](#Landing-Page-Visuals)
@@ -18,43 +18,43 @@
 
 
 
-[Table of Contents](#Drag-&-Drop-To-Do-List)
+[Table of Contents](#Table-of-Contents)
 
 ## Technologies-Used
 
 
 
-[Table of Contents](#Drag-&-Drop-To-Do-List)
+[Table of Contents](#Table-of-Contents)
 
 ## Landing-Page-Visuals
 
 
 
-[Table of Contents](#Drag-&-Drop-To-Do-List)
+[Table of Contents](#Table-of-Contents)
 
 ### Web
 
 
 
-[Table of Contents](#Drag-&-Drop-To-Do-List)
+[Table of Contents](#Table-of-Contents)
 
 ### Mobile
 
 
 
-[Table of Contents](#Drag-&-Drop-To-Do-List)
+[Table of Contents](#Table-of-Contents)
 
 ## What-I-enjoyed
 
 
 
-[Table of Contents](#Drag-&-Drop-To-Do-List)
+[Table of Contents](#Table-of-Contents)
 
 ## Issues-and-future-changes
 The next feature that will be added is the ability to add your own card deck. 
 
 
-[Table of Contents](#Drag-&-Drop-To-Do-List)
+[Table of Contents](#Table-of-Contents)
 
 ## Referenced-Materials
 
@@ -66,4 +66,4 @@ The next feature that will be added is the ability to add your own card deck.
 
 
 
-[Table of Contents](#Drag-&-Drop-To-Do-List)
+[Table of Contents](#Table-of-Contents)

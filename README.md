@@ -51,16 +51,25 @@
 [Table of Contents](#Table-of-Contents)
 
 ## Issues-and-future-changes
-The next feature that will be added is the ability to add your own card deck. 
+Issues I came across during the build:
+-
+
+Features that will be added in the future:
+ - Add and delete your own list categories.
+ - Change you background color
+ - Add a background image.
+ - Change task list and task item color.
 
 
 [Table of Contents](#Table-of-Contents)
 
 ## Referenced-Materials
 
-### Source Name
+### Drag & Drop To Do List
+[Drag & Drop](https://www.youtube.com/watch?v=ecKw7FfikwI&list=PL7p77eAgOOtK-mWrVj2bBnZztU9rcO6oO&index=4&t=13s)
 
-### Source Name
+### To Do List Local Storage
+[Local Storage](https://www.youtube.com/watch?v=6eFwtaZf6zc)
 
 ### Source Name
 

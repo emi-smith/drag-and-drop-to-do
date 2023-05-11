@@ -9,7 +9,7 @@
     filterOption.addEventListener("change", filterTodo);
 
     function addTodo(event) {
-    event.preventDefault();
+        event.preventDefault();
 
         // CREATE TODO DIV
         const todoDiv = document.createElement("div");
@@ -28,16 +28,14 @@
 
                 // CREATE NEW TODO INPUT
                 const newTodo = document.createElement("input");
-                // newTodo.innerText = todoInput.value; 
-                newTodo.setAttribute("value", todoInput.value);
                 newTodo.classList.add("todo-item");
+                newTodo.innerText = todoInput.value;
+                newTodo.setAttribute("value", todoInput.value);
                 newTodo.setAttribute("type", "text");
                 newTodo.setAttribute("name", "content");
                 newTodo.setAttribute("readonly", "readonly");
                 newTodo.setAttribute("placeholder","Text will go here");
-
                 todoDiv.appendChild(newTodo);
-
                 //ADDING TO LOCAL STORAGE 
                 saveLocalTodos(todoInput.value);
             
@@ -82,49 +80,53 @@
 
 }
 
-    function deleteCheck(e) {
-        const item = e.target;
+// CURRENTLY WORKING ON CODE BELOW
+    // SEE README FOR MORE INFORMATION ABOUT WHERE I'M AT WITH THE CODE BELOW.
 
-        if(item.classList[0] === "delete") {
-            const todo = item.parentElement;
-            todo.classList.add("slide");
+//     function deleteCheck(e) {
+//         const item = e.target;
 
-            removeLocalTodos(todo);
-            todo.addEventListener("transitionend", function() {
-                todo.remove();
-            });
-        }
+//         if(item.classList[0] === "delete") {
+//             const todo = item.parentElement;
+//             todo.classList.add("slide");
 
-        if(item.classList[0] === "complete-btn") {
-            const todo = item.parentElement;
-            todo.classList.toggle("completed");
-        }
-    }
+//             removeLocalTodos(todo);
+//             todo.addEventListener("transitionend", function() {
+//                 todo.remove();
+//             });
+//         }
 
-    function filterTodo(e) {
-        const todos = taskWrap.childNodes;
-        todos.forEach(function(todo) {
-            switch(e.target.value) {
-                case "all": 
-                    todo.style.display = "flex";
-                    break;
-                case "completed": 
-                    if(todo.classList.contains("completed")) {
-                        todo.style.display = "flex";
-                    } else {
-                        todo.style.display = "none";
-                    }
-                    break;
-                case "incomplete":
-                    if(!todo.classList.contains("completed")) {
-                        todo.style.display = "flex";
-                    } else {
-                        todo.style.display = "none";
-                    }
-                    break;
-            }
-        });
-    }
+//         if(item.classList[0] === "complete-btn") {
+//             const todo = item.parentElement;
+//             todo.setAttribute.toggle("checked");
+//         }
+//     }
+    
+// // TYPEERROR: cannot read properties of undefined (reading 'contains')
+//     function filterTodo(e) {
+//         const todos = taskWrap.childNodes;
+//         todos.forEach(function(todo) {
+//             switch(e.target.value) {
+//                 case "all": 
+//                     todo.style.display = "flex";
+//                     break;
+//                 case "completed": 
+//                     if(todo.classList.contains("complete")) {
+//                         todo.style.display = "flex";
+//                     } else {
+//                         todo.style.display = "none";
+//                     }
+//                     break;
+//                 case "incomplete":
+//                     if(!todo.classList.contains("complete")) {
+//                         todo.style.display = "flex";
+//                     } else {
+//                         todo.style.display = "none";
+//                     }
+//                     break;
+//             }
+//         });
+//     }
 
     function saveLocalTodos(todo) {
         let todos;
@@ -138,6 +140,20 @@
     }
 
     function getLocalTodos() {
+        document.onload = (()=>{
+        // GET TODO FROM STORAGE
+            // var todos = localStorage.getItem("todos");
+            // if (todos) {
+            // var todos = JSON.parse(localStorage.getItem("todos"));
+            // todos.push(todos.textContent);
+            // localStorage.setItem("todos", JSON.stringify(todos));
+            // } else {
+            // localStorage.setItem("todos", JSON.stringify([todos.textContent]));
+            // }        
+
+
+        
+        // ORIGINAL CODE TO GET ITEMS FROM LOCAL STORAGE
         let todos;
         if(localStorage.getItem("todos") === null) {
             todos = [];
@@ -150,6 +166,7 @@
             const todoDiv = document.createElement("div");
             todoDiv.classList.add("todo");
             todoDiv.setAttribute("draggable", "true");
+
             // Set new task to drag and drop
             todoDiv.addEventListener("dragstart", () => {
             todoDiv.classList.add("is-dragging");
@@ -160,7 +177,7 @@
 
                     // CREATE NEW TODO INPUT
                     const newTodo = document.createElement("input");
-                    // newTodo.innerText = todoInput.value; 
+                    newTodo.innerText = todoInput.value; 
                     newTodo.setAttribute("value", todoInput.value);
                     newTodo.classList.add("todo-item");
                     newTodo.setAttribute("type", "text");
@@ -205,20 +222,19 @@
 
                         // APPEND TASK TO TASK CONTAINER
                         taskWrap.appendChild(todoDiv);
-                        todoInput.value = "";
-                    
                 });
+    })()
     }
 
-    function removeLocalTodos(todo) {
-        let todos;
-        if(localStorage.getItem("todos") === null) {
-            todos = [];
-        } else {
-            todos = JSON.parse(localStorage.getItem("todos"));
-        }
+//     function removeLocalTodos(todo) {
+//         let todos;
+//         if(localStorage.getItem("todos") === null) {
+//             todos = [];
+//         } else {
+//             todos = JSON.parse(localStorage.getItem("todos"));
+//         }
 
-        const todoIndex = todo.children[0].innerText;
-        todos.splice(todos.indexOf(todoIndex), 1);
-        localStorage.setItem("todos", JSON.stringify(todos));
-    }
+//         const todoIndex = todo.children[0].innerText;
+//         todos.splice(todos.indexOf(todoIndex), 1);
+//         localStorage.setItem("todos", JSON.stringify(todos));
+//     }

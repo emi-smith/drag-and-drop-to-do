@@ -1,13 +1,14 @@
 // Highlight task when it is being dragged
-const draggables = document.querySelectorAll(".tasks");
-const droppables = document.querySelectorAll(".cards");
+const draggables = document.querySelectorAll(".todo");
+const droppables = document.querySelectorAll(".todo-list");
+const taskDrag = document.querySelector(".todo")
 
-draggables.forEach((tasks) => {
-    tasks.addEventListener("dragstart", () => {
-        tasks.classList.add("is-dragging");
+draggables.forEach((taskDrag) => {
+    taskDrag.addEventListener("dragstart", () => {
+        taskDrag.classList.add("is-dragging");
     });
-    tasks.addEventListener("dragend", () => {
-        tasks.classList.remove("is-dragging");
+    taskDrag.addEventListener("dragend", () => {
+        taskDrag.classList.remove("is-dragging");
     });
 });
 
@@ -28,19 +29,19 @@ droppables.forEach((zone) => {
 });
 
 const insertAboveTask = (zone, mouseY) => {
-    const els = zone.querySelectorAll(".tasks:not(.is-dragging)");
+    const els = zone.querySelectorAll(".todo:not(.is-dragging)");
 
     let closestTask = null;
     let closestOffset = Number.NEGATIVE_INFINITY;
 
-    els.forEach((tasks) => {
-        const { top } = tasks.getBoundingClientRect();
+    els.forEach((taskDrag) => {
+        const { top } = taskDrag.getBoundingClientRect();
 
         const offset = mouseY - top;
 
         if (offset < 0 && offset > closestOffset) {
             closestOffset =  offset;
-            closestTask = tasks
+            closestTask = taskDrag
         }
     });
 

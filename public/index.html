@@ -4,13 +4,160 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Quicksand:wght@300;400&family=Ubuntu:wght@400;700&display=swap"
+        rel="stylesheet">
+    
     <title>Drag & Drop To Do List</title>
     <link rel="stylesheet" href="./src/styles.css">
 </head>
 <body>
-    
+    <!-- APP WRAPPER -->
+    <div class="board">
+        <!--  TO DO FORM -->
+        <form id="to-do-form">
+            <div class="task-input-container">
+                <input type="text" name="content" placeholder="New Task" class="todo-input" id="to-do-input">
+            </div>
+            <div class="form-bottom">
+                <div class="deck-options">
+                    <label class="radio-container">
+                        <!-- <span class="bubble to-do"></span> -->
+                        <input type="radio" name="category" value="deck-1" name="deck-radio" class="bubble to-do" id="deck-to-do"/>
+                        <div class="radio-label" for="deck-to-do">To Do</div>
+                    </label>
+                    
+                    <label class="radio-container">
+                        <!-- <span class="bubble in-progress"></span> -->
+                        <input type="radio" name="category" value="deck-2" name="deck-radio" class="bubble in-progress" id="deck-in-progress"/>
+                        <div class="radio-label" for="deck-inprogress">In Progress</div>
+                    </label>
+                    
+                    <label class="radio-container">
+                        <!-- <span class="bubble pending"></span> -->
+                        <input type="radio" name="category" value="deck-3" name="deck-radio" class="bubble pending" id="deck-pending"/>
+                        <div class="radio-label" for="deck-pending">Pending</div>
+                    </label>
+                    
+                    <label class="radio-container">
+                        <!-- <span class="bubble complete"></span> -->
+                        <input type="radio" name="category" value="deck-4" name="deck-radio" class="bubble archive" id="deck-archive"/>
+                        <div class="radio-label" for="deck-complete">Archive</div>
+                    </label>
+                </div>
+                <button class="todo-button" type="submit">Add Task</button>
+                <!-- <button onclick="deleteItems()">
+                    Delete ALL
+                </button> -->
+            </div>
+        </form>
+        <!-- END OF TO DO FORM -->
 
+
+
+        <!-- TO DO LIST TO DO CONTAINER -->
+        <div class="todo-container" id="todo-main-main">
+            <!-- FILTER TASKS SECTION -->
+            <section id="filter-section">
+                <div class="select">
+                    <select name="todos" class="filter-todo">
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="incomplete">Incomplete</option>
+                    </select>
+                </div>
+            </section>
+            <!-- END OF FILTER TASKS SECTION -->
+            <div class="todo-list" name="deck" id="to-do">
+                <h3 class="list-heading">To Do</h3>
+                <!---------------------- TASK WRAPPER ------------------------------>
+                <div class="task-wrapper" id="task-wrap">
+                    <div class="todo" draggable="true">
+                        <input type="text" name="content" placeholder="Text will go here" value="To do task" class="todo-item" readonly></input>
+                        <div class="actions-container">
+                            <label class="finished-task">
+                                <input type="checkbox" class="complete-btn"/>
+                            </label>
+                    
+                            <div class="actions">
+                                <button class="edit">Edit</button>
+                                <button class="delete">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="todo complete" draggable="true">
+                        <input type="text" name="content" value="To do task" class="todo-item" readonly></input>
+                        <div class="actions-container">
+                            <label class="finished-task">
+                                <input type="checkbox" class="complete-btn" checked />
+                            </label>
+                    
+                            <div class="actions">
+                                <button class="edit">Edit</button>
+                                <button class="delete">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="task-wrapper complete" id="task-wrap">
+                    <div class="todo done" draggable="true">
+                        <input type="text" name="content" value="In progress task" class="todo-item" readonly></input>
+                        <div class="actions-container">
+                            <label class="finished-task">
+                                <input type="checkbox" class="complete-btn" checked />
+                            </label>
+                
+                            <div class="actions">
+                                <button class="edit">Edit</button>
+                                <button class="delete">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!---------------------- END TASK --------------------------->
+            </div>
+            <div class="todo-list inprogress" name="deck" id="inprogress">
+                <h3 class="list-heading">In Progress</h3>
+                <!---------------------- TASK WRAPPER ------------------------------>
+                <div class="task-wrapper inprogress" id="task-wrap">
+                </div>
+                <!---------------------- END TASK --------------------------->
+            </div>
+            <div class="todo-list pending" name="deck" id="pending">
+                <h3 class="list-heading">Pending</h3>
+                <!---------------------- TASK WRAPPER ------------------------------>
+                <div class="task-wrapper pending" id="task-wrap">
+                </div>
+                <!---------------------- END TASK --------------------------->
+            </div>
+            <div class="todo-list archive" name="deck" id="archive">
+                <h3 class="list-heading">Archive</h3>
+                <!---------------------- TASK WRAPPER------------------------------>
+                <div class="task-wrapper archive" id="task-wrap">
+                </div>
+                <!---------------------- END TASK --------------------------->
+            </div>
+        </div>
+        <!-- END OF TO DO LIST TO DO CONTAINER -->
+    </div>
+<!-- END OF APP WRAPPER -->
+
+<!-- <script>
+    function deleteItems() {
+        // Clear local storage items.
+        localStorage.clear();
+    }
+</script> -->
+
+<!-- FONT AWESOME SCRIPT -->
+<script src="https://kit.fontawesome.com/e1590454b3.js" crossorigin="anonymous"></script>
+<!-- END OF FONT AWESOME SCRIPT -->
+
+<!-- JS IMPORT -->
     <script src="./src/drag.js"></script>
     <script src="./src/todo.js"></script>
+<!-- END OF JS IMPORT -->
 </body>
 </html>

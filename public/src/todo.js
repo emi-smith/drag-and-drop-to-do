@@ -27,7 +27,7 @@
         });
 
                 // CREATE NEW TODO INPUT
-                const newTodo = document.createElement("input");
+                const newTodo = document.createElement("textarea");
                 newTodo.classList.add("todo-item");
                 newTodo.innerText = todoInput.value;
                 newTodo.setAttribute("value", todoInput.value);
@@ -176,7 +176,7 @@
             });
 
                     // CREATE NEW TODO INPUT
-                    const newTodo = document.createElement("input");
+                    const newTodo = document.createElement("textarea");
                     newTodo.innerText = todoInput.value; 
                     newTodo.setAttribute("value", todoInput.value);
                     newTodo.classList.add("todo-item");

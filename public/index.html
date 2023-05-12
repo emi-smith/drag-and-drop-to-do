@@ -19,7 +19,7 @@
         <!--  TO DO FORM -->
         <form id="to-do-form">
             <div class="task-input-container">
-                <input type="text" name="content" placeholder="New Task" class="todo-input" id="to-do-input">
+                <textarea type="text" name="content" placeholder="New Task" class="todo-input" id="to-do-input"></textarea>
             </div>
             <div class="form-bottom">
                 <div class="deck-options">
@@ -74,26 +74,26 @@
                 <h3 class="list-heading">To Do</h3>
                 <!---------------------- TASK WRAPPER ------------------------------>
                 <div class="task-wrapper" id="task-wrap">
+                    <!-- INCOMPLETE TASK -->
                     <div class="todo" draggable="true">
-                        <input type="text" name="content" placeholder="Text will go here" value="To do task" class="todo-item" readonly></input>
+                        <textarea type="text" name="content" placeholder="Text will go here" value="To do task" class="todo-item" readonly></textarea>
                         <div class="actions-container">
                             <label class="finished-task">
                                 <input type="checkbox" class="complete-btn"/>
                             </label>
-                    
                             <div class="actions">
                                 <button class="edit">Edit</button>
                                 <button class="delete">Delete</button>
                             </div>
                         </div>
                     </div>
+                    <!-- COMPLETE TASK -->
                     <div class="todo complete" draggable="true">
-                        <input type="text" name="content" value="To do task" class="todo-item" readonly></input>
+                        <textarea type="text" name="content" placeholder="Text will go here" value="To do task complete" class="todo-item" readonly></textarea>
                         <div class="actions-container">
                             <label class="finished-task">
                                 <input type="checkbox" class="complete-btn" checked />
                             </label>
-                    
                             <div class="actions">
                                 <button class="edit">Edit</button>
                                 <button class="delete">Delete</button>
@@ -101,21 +101,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="task-wrapper complete" id="task-wrap">
-                    <div class="todo done" draggable="true">
-                        <input type="text" name="content" value="In progress task" class="todo-item" readonly></input>
-                        <div class="actions-container">
-                            <label class="finished-task">
-                                <input type="checkbox" class="complete-btn" checked />
-                            </label>
-                
-                            <div class="actions">
-                                <button class="edit">Edit</button>
-                                <button class="delete">Delete</button>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
                 <!---------------------- END TASK --------------------------->
             </div>
             <div class="todo-list inprogress" name="deck" id="inprogress">

@@ -12,10 +12,143 @@
     
     <title>Drag & Drop To Do List</title>
     <link rel="stylesheet" href="./src/styles.css">
+    <!-- <link rel="stylesheet" href="./src/note.css"> -->
 </head>
 <body>
     <!-- APP WRAPPER -->
     <div class="board">
+        <!-- NOTE MODAL SECTION -->
+        <section>
+            <!-- NOTE MODAL -->
+            <section class="note-modal" id="note-id">
+                <div class="note-border">
+                    <div class="note-content">
+                        <span class="close-note-btn">&times;</span>
+                        <div class="note-cards">
+                            <div class="modal-section contents" id="top">
+                                <h1>PROJECT INFORMATION</h1>
+                                <h2> 
+                                    Drag & Drop To Do List
+                                </h2>
+                                <h3>Table of Contents</h3>
+                                <ul class="contents">
+                                    <li><a href="#description">Description</a></li>
+                                    <li><a href="#status">Project Status</a></li>
+                                    <li><a href="#technologies">Technologies Used</a></li>
+                                    <li><a href="#issues-changes">Issues and future changes</a></li>
+                                    <li><a href="#repository">GitHub</a></li>
+                                </ul>
+                            </div>
+                            
+                            <!-- DESCRIPTION -->
+                            <div class="modal-section" id="description">
+                                <h3>
+                                    Description
+                                </h3>
+                                <p>
+                                    A simple drag and drop to do list. My goal with this project was to dive deeper into getting and storing data to local
+                                    storage. Learn how to capture multiple inputs and put them into an array then save, get, edit then update the array in local
+                                    storage. As well as learning how to allow users to filter, edit, complete, and delete items. As well as learn more about touch
+                                    events.
+                                </p>
+                            </div>
+
+                            <!-- PROJECT STATUS -->
+                            <div class="modal-section" id="status">
+                                <h3>
+                                    Project Status
+                                </h3>
+                                <p>Currently working on this project.</p>
+                                
+                                <ul class="project-info">
+                                    <h4>Javascript</h4> 
+                                        <li>Local Storage</li> 
+                                        <li>Currently working on getting textarea inner text from local storage.</li> 
+                                        <li>Add category selection to new task array, save and get task with the corresponding category.</li> 
+                                        <li>Task category to change when it is dragged and dropped into a new category, changes are updated and stored in local
+                                        storage.</li> 
+                                    
+                                        <h5>Issues I'm having with local storage.</h5> 
+                                            <p>Items are being saved to local storage and all content and text will display until page reload, then everything is
+                                            displayed, but textarea inner text, which is still stored in local storage.</p> 
+
+                                        <h5>Other Functions to Finish or Add</h5> 
+                                            <li>Fix To Do task list, it's currently not letting tasks drag and drop inside itself. Tasks will drag and drop into other
+                                        categories.</li> 
+                                            <li>Task Filter.</li> 
+                                            <li>Task complete checkbox.</li> 
+                                            <li>Edit button.</li> 
+                                            <li>Delete button.</li> 
+                                            <li>Delete all tasks button.</li> 
+                                            <li>Touch events.</li> 
+                                    
+                                    <h4>CSS</h4> 
+                                        <li>I will be updating the design a little after finishing the JavaScript.</li> 
+                                        <li>Fix textarea and task item, needs to get larger to fit text instead of scroll.</li> 
+                                        <li>Layout of task lists and tasks on mobile and tablet.</li> 
+                                        <li>Size of task lists and tasks, ensure user friendly for mobile and tablet.</li> 
+                                        <li>Fix line through textarea inner text and turn text grey upon task completion.</li> 
+
+                                    <h4>HTML</h4> 
+                                        <li>Delete all tasks button.</li>
+                                </ul>
+                            </div>
+
+                            <!-- TECHNOLOGIES USED -->
+                            <div class="modal-section" id="technologies">
+                                <h3>
+                                    Technologies
+                                </h3>
+                                <ul class="project-info">
+                                    <li>CSS</li>
+                                    <li>HTML</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                            </div>
+
+                            <!--   ISSUES AND FUTURE CHANGES -->
+                            <div class="modal-section" id="issues-changes">
+                                <h3>
+                                    Issues and Future Changes
+                                </h3>
+                                <ul class="project-info">
+                                    <h4>Issues</h4>
+
+                                    <p> 
+                                        As mentioned above the current issue I am working on is; Items are being saved to local storage and all content and text
+                                        will display until page reload, then everything is displayed, but textarea inner text, which is still storged in local
+                                        storage.
+                                    </p>
+                                    
+
+                                    <h4>Features</h4>
+                                    <li>Add and delete your own list categories.</li> 
+                                    <li>Change background color.</li> 
+                                    <li>Add a background image.</li> 
+                                    <li>Change task list and task item color.</li> 
+                                    <li>Dark mode.</li> 
+                                </ul>
+                            </div>
+
+                            <!-- REPOSITORY -->
+                            <div class="modal-section" id="repository">
+                                <h3>
+                                    Project Repository
+                                </h3>
+                                <p>Review drag and drop to to list <a href="https://github.com/emi-smith/drag-and-drop-to-do">GitHub repository</a>.</p>
+                            </div>
+                            <div class="top-link">
+                                <a href="#top">Back to the top!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--  NOTE MOADAL BUTTON  -->
+            <div class="notify-btn-div">
+                <a id="notify-btn-id" class="notify-email-btn" href="#" src="/">CLICK FOR PROJECT INFORMATION</a>
+            </div>
+        </section>
         <!--  TO DO FORM -->
         <form id="to-do-form">
             <div class="task-input-container">
@@ -129,13 +262,6 @@
     </div>
 <!-- END OF APP WRAPPER -->
 
-<!-- <script>
-    function deleteItems() {
-        // Clear local storage items.
-        localStorage.clear();
-    }
-</script> -->
-
 <!-- FONT AWESOME SCRIPT -->
 <script src="https://kit.fontawesome.com/e1590454b3.js" crossorigin="anonymous"></script>
 <!-- END OF FONT AWESOME SCRIPT -->
@@ -143,6 +269,7 @@
 <!-- JS IMPORT -->
     <script src="./src/drag.js"></script>
     <script src="./src/todo.js"></script>
+    <script src="./src/note-modal.js"></script>
 <!-- END OF JS IMPORT -->
 </body>
 </html>

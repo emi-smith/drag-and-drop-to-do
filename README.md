@@ -15,7 +15,7 @@
    - [License](#MIT-License)
 
 ## Description
-A simple drag and drop to do list. My goal with this project was to dive deeper into getting and storing data to local storage, to capture multiple inputs and put them into an array then save, get, edit them then update the array in local storage. As well as learning how to allow users to filter, edit, complete, delete items, and learn more about touch events.
+A simple drag and drop to do list. My goal with this project was to dive deeper into getting and storing data to local storage. Learn how to capture multiple inputs and put them into an array then save, get, edit then update the array in local storage. As well as learning how to allow users to filter, edit, complete, and delete items. As well as learn more about touch events.
 
 [Table of Contents](#Table-of-Contents)
 

@@ -1,3 +1,5 @@
+@import url("note.css");
+
 /* _________________ General Styling ________________ */
 :root{
     --primary: #a7b5ab;
@@ -5,7 +7,7 @@
     --btn-hover: #879696;
     --radio: #4b5562;
     --light: #f4f4f4;
-    --dark: #4b5562;
+    --dark: #2e2e2e;
     --grey: #888;
     --to-do: rgba(93, 42, 150);
     --in-progress: rgba(19, 89, 173);
@@ -24,7 +26,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Montserrat;
 
     /* IE and Edge */
     -ms-overflow-style: none;

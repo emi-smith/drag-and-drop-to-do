@@ -5,8 +5,8 @@
 
     document.addEventListener("DOMContentLoaded", getLocalTodos);
     todoButton.addEventListener("click", addTodo);
-    taskWrap.addEventListener("click", deleteCheck);
-    filterOption.addEventListener("change", filterTodo);
+    // taskWrap.addEventListener("click", deleteCheck);
+    // filterOption.addEventListener("change", filterTodo);
 
     function addTodo(event) {
         event.preventDefault();
@@ -83,50 +83,50 @@
 // CURRENTLY WORKING ON CODE BELOW
     // SEE README FOR MORE INFORMATION ABOUT WHERE I'M AT WITH THE CODE BELOW.
 
-//     function deleteCheck(e) {
-//         const item = e.target;
+    // function deleteCheck(e) {
+    //     const item = e.target;
 
-//         if(item.classList[0] === "delete") {
-//             const todo = item.parentElement;
-//             todo.classList.add("slide");
+    //     if(item.classList[0] === "delete") {
+    //         const todo = item.parentElement;
+    //         todo.classList.add("slide");
 
-//             removeLocalTodos(todo);
-//             todo.addEventListener("transitionend", function() {
-//                 todo.remove();
-//             });
-//         }
+    //         removeLocalTodos(todo);
+    //         todo.addEventListener("transitionend", function() {
+    //             todo.remove();
+    //         });
+    //     }
 
-//         if(item.classList[0] === "complete-btn") {
-//             const todo = item.parentElement;
-//             todo.setAttribute.toggle("checked");
-//         }
-//     }
+    //     if(item.classList[0] === "complete-btn") {
+    //         const todo = item.parentElement;
+    //         todo.setAttribute.toggle("checked");
+    //     }
+    // }
     
-// // TYPEERROR: cannot read properties of undefined (reading 'contains')
-//     function filterTodo(e) {
-//         const todos = taskWrap.childNodes;
-//         todos.forEach(function(todo) {
-//             switch(e.target.value) {
-//                 case "all": 
-//                     todo.style.display = "flex";
-//                     break;
-//                 case "completed": 
-//                     if(todo.classList.contains("complete")) {
-//                         todo.style.display = "flex";
-//                     } else {
-//                         todo.style.display = "none";
-//                     }
-//                     break;
-//                 case "incomplete":
-//                     if(!todo.classList.contains("complete")) {
-//                         todo.style.display = "flex";
-//                     } else {
-//                         todo.style.display = "none";
-//                     }
-//                     break;
-//             }
-//         });
-//     }
+// TYPEERROR: cannot read properties of undefined (reading 'contains')
+    // function filterTodo(e) {
+    //     const todos = taskWrap.childNodes;
+    //     todos.forEach(function(todo) {
+    //         switch(e.target.value) {
+    //             case "all": 
+    //                 todo.style.display = "flex";
+    //                 break;
+    //             case "completed": 
+    //                 if(todo.classList.contains("complete")) {
+    //                     todo.style.display = "flex";
+    //                 } else {
+    //                     todo.style.display = "none";
+    //                 }
+    //                 break;
+    //             case "incomplete":
+    //                 if(!todo.classList.contains("complete")) {
+    //                     todo.style.display = "flex";
+    //                 } else {
+    //                     todo.style.display = "none";
+    //                 }
+    //                 break;
+    //         }
+    //     });
+    // }
 
     function saveLocalTodos(todo) {
         let todos;
@@ -226,15 +226,15 @@
     })()
     }
 
-//     function removeLocalTodos(todo) {
-//         let todos;
-//         if(localStorage.getItem("todos") === null) {
-//             todos = [];
-//         } else {
-//             todos = JSON.parse(localStorage.getItem("todos"));
-//         }
+    // function removeLocalTodos(todo) {
+    //     let todos;
+    //     if(localStorage.getItem("todos") === null) {
+    //         todos = [];
+    //     } else {
+    //         todos = JSON.parse(localStorage.getItem("todos"));
+    //     }
 
-//         const todoIndex = todo.children[0].innerText;
-//         todos.splice(todos.indexOf(todoIndex), 1);
-//         localStorage.setItem("todos", JSON.stringify(todos));
-//     }
+    //     const todoIndex = todo.children[0].innerText;
+    //     todos.splice(todos.indexOf(todoIndex), 1);
+    //     localStorage.setItem("todos", JSON.stringify(todos));
+    // }
